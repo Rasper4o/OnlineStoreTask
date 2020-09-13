@@ -11,7 +11,6 @@ module.exports = function routeCategoriesMens(req, res) {
         // Underscore.js lib
         _,
 
-        // Template data
         title: 'categoriesMens',
         items,
       });

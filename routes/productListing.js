@@ -20,8 +20,6 @@ module.exports = function routeProductListing(req, res) {
       res.render('productListing', {
         // Underscore.js lib
         _,
-
-        // Template data
         title: "/categoriesMens",
         items,
       });
