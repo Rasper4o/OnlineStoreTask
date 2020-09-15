@@ -1,7 +1,7 @@
 <%- include header.ejs %>
 
 <ul class="breadcrumb">
-  <li><a href="/">Home</a></li>
+  <li><a href="/">HOME</a></li>
   <li><a href="<%= title %>"><%= title %></a></li>
   <li>Product Listing</li>
 </ul>
@@ -17,16 +17,16 @@
 
     <div class="col-lg-4 col-md-6 mb-4">
       <div class="card h-100">
-        <a href="#"><img class="card-img-top" src="images/<%= product.image_groups[0].images[0].link %>" alt=""></a>
+        <img class="card-img-top" src="images/<%= product.image_groups[0].images[0].link %>" alt="">
         <div class="card-body">
           <h4 class="card-title">
-            <a href="#"><%= product.name %></a>
+            <p><%= product.name %></p>
           </h4>
           <h5><%= product.price %></h5>
           <p class="card-text"><%= product.short_description %></p>
         </div>
         <div class="card-footer">
-          <a href="">
+          <a href="/productDescription?productID=<%= product.id%>">
             <button class="btn" type="submit">More Info</button>
           </a>
         </div>

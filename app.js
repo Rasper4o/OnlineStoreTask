@@ -10,7 +10,7 @@ const session = require('express-session');
 const routes = {
   index: require('./routes/index'),
   hello: require('./routes/hello'),
-  categoriesMens: require('./routes/categoriesMens'),
+  categories: require('./routes/categories'),
   productListing: require('./routes/productListing'),
   productDescription: require('./routes/productDescription'),
 };
@@ -41,7 +41,7 @@ app.use(express.errorHandler());
 // App routes
 app.get('/', routes.index);
 app.get('/hello', routes.hello);
-app.get('/categoriesMens', routes.categoriesMens);
+app.get('/categories', routes.categories);
 app.get('/productListing', routes.productListing);
 app.get('/productDescription', routes.productDescription);
 

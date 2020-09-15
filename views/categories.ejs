@@ -1,0 +1,41 @@
+<%- include header.ejs %>
+
+<ul class="breadcrumb">
+    <li><a href="/">HOME</a></li>
+    <li><a href="<%= url %>"><%= item.name.toUpperCase() %> CATEGORIES</a></li>
+</ul>
+
+    <div class="bodyContainer">
+        
+        <h1><%= item.name %></h1>
+        <p><%= item.page_description %></p>
+        <% if (item.image) { %>
+        <div>
+            <img src="/images/<%= item.image %>">
+        </div>
+        <% } %>
+        <div>
+            <h1>Subcategories</h1>
+            <% _.each(item.categories, function(subCategory) { %>
+            
+            <h2><%= subCategory.name %></h1>
+            <% if (subCategory.image) { %>
+                <div>
+                    <img src="/images/<%= subCategory.image %>" class="image">
+                </div>
+            <% } %>
+            <p><%= subCategory.page_description %></p>
+            
+
+            <a href="/productListing?subcategory=<%= subCategory.id%>">
+                <button class="btn" type="submit">View Products</button>
+            </a>
+            <hr style="width:50%;text-align:left;margin-left:0">
+            <% }); %>                    
+            
+        </div>    
+        
+        
+    </div>
+
+<%- include footer.ejs %>
